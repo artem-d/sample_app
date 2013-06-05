@@ -3,6 +3,8 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0.rc1'
 gem 'bootstrap-sass', '2.1'
+gem 'bcrypt-ruby', '3.0.1'
+gem 'debugger2', git: 'git@github.com:ko1/debugger2.git', require: 'debugger'
 
 group :development, :test do
   gem 'sqlite3'
@@ -13,6 +15,10 @@ group :development, :test do
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
+end
+
+group :development do
+  gem 'annotate', '2.5.0'
 end
 
 group :test do

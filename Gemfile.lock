@@ -14,6 +14,14 @@ GIT
     spork-rails (3.2.1)
       spork (>= 1.0rc0)
 
+GIT
+  remote: git@github.com:ko1/debugger2.git
+  revision: 868f94f8b67e13f3cd3921be15168dcebf2e7019
+  specs:
+    debugger2 (1.0.0.beta2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,8 +49,11 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    annotate (2.5.0)
+      rake
     arel (4.0.0)
     atomic (1.1.9)
+    bcrypt-ruby (3.0.1)
     bootstrap-sass (2.1.0.0)
     builder (3.1.4)
     capybara (2.1.0)
@@ -61,6 +72,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    columnize (0.3.6)
+    debugger-linecache (1.2.0)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -204,10 +217,13 @@ PLATFORMS
 
 DEPENDENCIES
   activeresource!
+  annotate (= 2.5.0)
+  bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.1)
   capybara (= 2.1.0)
   childprocess (= 0.3.9)
   coffee-rails (= 4.0.0)
+  debugger2!
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
   jbuilder (= 1.0.2)
