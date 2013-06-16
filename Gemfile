@@ -5,10 +5,11 @@ gem 'rails', '4.0.0.rc1'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'activeresource', git: 'git://github.com/rails/activeresource', require: 'active_resource' 
+gem 'pg'
 
 group :development, :test do
   gem 'debugger2', git: 'git@github.com:ko1/debugger2.git', require: 'debugger'
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
   gem 'activeresource', git: 'git://github.com/rails/activeresource', require: 'active_resource' 
   gem 'therubyracer', :platforms => :ruby
@@ -42,6 +43,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+  # gem 'pg', '0.15.1'
   gem 'thin'
 end
