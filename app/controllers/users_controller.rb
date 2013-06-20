@@ -8,8 +8,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation)) 
+    @user = User.new(user_params) 
     if @user.save
+      sign_in @user
       flash[:success] = "Welcome to My Awesome App!"
       redirect_to @user
     else
