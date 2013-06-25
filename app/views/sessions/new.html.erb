@@ -1,4 +1,4 @@
-<% provide(:title, "Sign in") %>
+<% provide(:title, 'Sign in') %>
 <h1>Sign in</h1>
 
 <div class="row">
@@ -9,12 +9,12 @@
       <!-- <%= label_tag :email %> -->
       <%= label_tag 'session_email', 'Email' %>
       <!-- <%= text_field_tag :email, params[:email] %> -->
-      <%= text_field_tag "session[email]" %>
+      <%= text_field_tag 'session[email]' %>
 
       <%= label_tag 'session_password', 'Password' %>
-      <%= password_field_tag "session[password]" %>
+      <%= password_field_tag 'session[password]' %>
 
-      <%= submit_tag 'Sign in', class: "btn btn-large btn-primary" %>
+      <%= submit_tag 'Sign in', class: 'btn btn-large btn-primary' %>
     <% end %>
 
     <!-- 
@@ -26,10 +26,10 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
     
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+      <%= f.submit 'Sign in', class: 'btn btn-large btn-primary' %>
     <% end %>
     -->
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
   </div>
 </div>
