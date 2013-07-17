@@ -12,9 +12,9 @@
 development:
   adapter: postgresql
   host: localhost
-  username: sample_app
-  password: sample_app
-  database: app-dev
+  username: rt
+  password: gaga
+  database: sample_app_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,14 +28,15 @@ development:
 test: &test
   adapter: postgresql
   host: localhost
-  username: sample_app
-  password: sample_app
-  database: app-test
+  username: rt
+  password: gaga
+  database: sample_app_test
 
 # production:
 #   adapter: sqlite3
 #   database: db/production.sqlite3
 #   pool: 5
 #   timeout: 5000
+
 cucumber:
   <<: *test
