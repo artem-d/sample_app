@@ -1,17 +1,21 @@
 SampleApp::Application.routes.draw do
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   root :to => 'static_pages#home'
 
-  resources :users
-  resources :sessions,   only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
+  resources :sessions,      only: [:new, :create, :destroy]
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
-  get '/help' => 'static_pages#help'
-  get '/about' => 'static_pages#about'
-  get '/contact' => 'static_pages#contact'
-
-  get '/signup' => 'users#new'
-  get '/signin' => 'sessions#new'
+  get '/help'        => 'static_pages#help'
+  get '/about'       => 'static_pages#about'
+  get '/contact'     => 'static_pages#contact'
+  get '/signup'      => 'users#new'
+  get '/signin'      => 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:
